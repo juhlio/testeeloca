@@ -20,7 +20,7 @@ use App\Http\Controllers\ApiController;
 Route::get('/', [ApiController::class, 'list']);
 Route::post('/', [ApiController::class, 'store']);
 Route::put('/update/{id}', [ApiController::class, 'update']);
-Route::delete('/delete/{id}', [ApiController::class, 'delete']);
+Route::delete('/delete/{id}', [ApiController::class, 'delete'])->name('excluiEmpresa');
 Route::get('/show/{id}', [ApiController::class, 'show']);
 
 
