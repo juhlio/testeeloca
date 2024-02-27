@@ -11,7 +11,7 @@
 
     <div class="col-md-4">
 
-    <a class="btn btn-success" href="{{route('novaEmpresa')}}">Nova Empresa</a>
+    <a class="btn btn-success" href="{{route('novoCliente')}}">Novo Cliente</a>
 
     </div>
 
@@ -30,15 +30,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($empresas as $empresa)
+            @foreach($clientes as $cliente)
             <tr>
-                <td>{{$empresa->recnum}}</td>
-                <td>{{$empresa->codigo}}</td>
-                <td>{{$empresa->empresa}}</td>
-                <td>{{$empresa->sigla}}</td>
-                <td>{{$empresa->razao_social}}</td>
-                <td> <a class="btn btn-success" href="{{route('detalheEmpresa', $empresa->recnum)}}">Detalhes</a> </td>
-                <td> <a class="btn btn-danger" href="{{route('excluiEmpresa', $empresa->recnum)}}">Excluir</a> </td>
+                <td>{{$cliente->recnum}}</td>
+                <td>{{$cliente->empresa}}</td>
+                <td>{{$cliente->codigo}}</td>
+                <td>{{$cliente->razao_social}}</td>
+                <td>{{$cliente->tipo}}</td>
+                <td>{{$cliente->cpf_cnpj}}</td>
+
+                <td> <a class="btn btn-success" href="{{ route('detalheCliente', $cliente->recnum) }}">Detalhes</a> </td>
+                <td> <a class="btn btn-danger" href="{{route('excluiCliente', $cliente->recnum) }}">Excluir</a> </td>
             </tr>
             @endforeach
         </tbody>

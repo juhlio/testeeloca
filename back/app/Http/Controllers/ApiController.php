@@ -20,7 +20,7 @@ class ApiController extends Controller
     {
         $empresa = new empresa();
         $empresa->codigo = $r->input('codigo');
-        $empresa->empresa = $r->input('empresa');
+        $empresa->company = $r->input('empresa');
         $empresa->sigla = $r->input('sigla');
         $empresa->razao_social = $r->input('razao_social');
         $empresa->save();
@@ -30,7 +30,7 @@ class ApiController extends Controller
     {
 
         $empresa = Empresa::where('recnum', $id)->first();
-        $empresa->empresa = $r->input('empresa');
+        $empresa->company = $r->input('empresa');
         $empresa->sigla = $r->input('sigla');
         $empresa->razao_social = $r->input('razao_social');
         $empresa->save();

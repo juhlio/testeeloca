@@ -10,9 +10,10 @@ class Empresa extends Model
 {
 
     protected $primaryKey = 'recnum';
+
     protected $fillable = [
         'codigo',
-        'empresa',
+        'company',
         'sigla',
         'razao_social',
     ];
