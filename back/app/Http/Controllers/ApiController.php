@@ -50,6 +50,7 @@ class ApiController extends Controller
 
         $empresa = Empresa::where('recnum', $id)->first();
         $empresa->delete();
+        return redirect()->back();
     }
 
 }
